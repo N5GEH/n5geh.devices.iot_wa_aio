@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name IoT_AIO_libraries)(type Legacy)(uri ${KIPRJMOD}/IoT_AIO_libraries.lib)(options "")(descr ""))
+)

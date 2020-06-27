@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title "IoT - Wireless Adapter - Analog IO"
+Date "2020-06-27"
+Rev ""
+Comp "RWTH - ACS"
+Comment1 "Author: Carlo Guarnieri Calò Carducci"
+Comment2 "email: cguarnieri@eonerc.rwth-aachen.de"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_US R23
+U 1 1 5CDD3336
+P 3400 4150
+F 0 "R23" V 3350 4050 50  0000 C CNN
+F 1 "3.3k" V 3350 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3440 4140 50  0001 C CNN
+F 3 "~" H 3400 4150 50  0001 C CNN
+	1    3400 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4000 3400 3700
+Wire Wire Line
+	3400 4300 3400 4450
+$Comp
+L power:+3V3 #PWR030
+U 1 1 5CDDC622
+P 3400 4450
+F 0 "#PWR030" H 3400 4300 50  0001 C CNN
+F 1 "+3V3" H 3415 4623 50  0000 C CNN
+F 2 "" H 3400 4450 50  0001 C CNN
+F 3 "" H 3400 4450 50  0001 C CNN
+	1    3400 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5CDDCE51
+P 5850 2800
+F 0 "C5" V 6000 2800 50  0000 L CNN
+F 1 "100n" V 5700 2700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5888 2650 50  0001 C CNN
+F 3 "~" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 5CDDD5A7
+P 4900 2800
+F 0 "#PWR034" H 4900 2550 50  0001 C CNN
+F 1 "GND" H 4905 2627 50  0000 C CNN
+F 2 "" H 4900 2800 50  0001 C CNN
+F 3 "" H 4900 2800 50  0001 C CNN
+	1    4900 2800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5300 2800 5450 2800
+Wire Wire Line
+	4900 2800 5000 2800
+Wire Wire Line
+	6600 3500 6950 3500
+Wire Wire Line
+	6950 3500 6950 3350
+Wire Wire Line
+	6950 3350 7200 3350
+Wire Wire Line
+	6600 3600 6950 3600
+Wire Wire Line
+	6950 3600 6950 3700
+Wire Wire Line
+	6950 3700 7200 3700
+$Comp
+L Device:R_US R29
+U 1 1 5CDF2ACE
+P 7200 3550
+F 0 "R29" H 7268 3596 50  0000 L CNN
+F 1 "402 0.1%" H 7268 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7240 3540 50  0001 C CNN
+F 3 "~" H 7200 3550 50  0001 C CNN
+	1    7200 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3400 7200 3350
+Wire Wire Line
+	6600 3700 6950 3700
+Connection ~ 6950 3700
+Wire Wire Line
+	6600 3350 6950 3350
+Connection ~ 6950 3350
+Wire Wire Line
+	6600 3850 6800 3850
+Wire Wire Line
+	5250 5000 5250 5250
+Wire Wire Line
+	6800 4000 6800 3850
+$Comp
+L power:GND #PWR033
+U 1 1 5CDFFCB7
+P 5500 5250
+F 0 "#PWR033" H 5500 5000 50  0001 C CNN
+F 1 "GND" H 5505 5077 50  0000 C CNN
+F 2 "" H 5500 5250 50  0001 C CNN
+F 3 "" H 5500 5250 50  0001 C CNN
+	1    5500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5CDFFF53
+P 5250 5250
+F 0 "#PWR031" H 5250 5000 50  0001 C CNN
+F 1 "GND" H 5255 5077 50  0000 C CNN
+F 2 "" H 5250 5250 50  0001 C CNN
+F 3 "" H 5250 5250 50  0001 C CNN
+	1    5250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR032
+U 1 1 5CDF5725
+P 5450 2750
+F 0 "#PWR032" H 5450 2600 50  0001 C CNN
+F 1 "+3V3" H 5465 2923 50  0000 C CNN
+F 2 "" H 5450 2750 50  0001 C CNN
+F 3 "" H 5450 2750 50  0001 C CNN
+	1    5450 2750
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5450 2800
+Wire Wire Line
+	5450 2800 5450 2750
+Text HLabel 9350 3700 2    50   Input ~ 10
+IFORCE+
+Text HLabel 9300 4500 2    50   Input ~ 10
+IFORCE-
+Text HLabel 9350 3800 2    50   Input ~ 10
+RTDIN+
+Text HLabel 9300 4400 2    50   Input ~ 10
+RTDIN-
+Text HLabel 2750 3250 0    50   Input ~ 10
+SCK
+Text HLabel 2750 3400 0    50   Input ~ 10
+SDI
+Text HLabel 2750 3550 0    50   Output ~ 10
+SDO
+Text HLabel 2750 3700 0    50   Input ~ 10
+SS
+Wire Wire Line
+	5500 5000 5500 5150
+Wire Wire Line
+	5500 5150 5800 5150
+Wire Wire Line
+	5800 5150 5800 5000
+Connection ~ 5500 5150
+Wire Wire Line
+	5500 5150 5500 5250
+Wire Wire Line
+	6800 4000 6600 4000
+Wire Wire Line
+	6600 4300 7600 4300
+$Comp
+L Device:C C6
+U 1 1 5CDDCDEA
+P 7600 4150
+F 0 "C6" H 7715 4196 50  0000 L CNN
+F 1 "1u" H 7715 4105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7638 4000 50  0001 C CNN
+F 3 "~" H 7600 4150 50  0001 C CNN
+	1    7600 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3950 7100 4150
+Wire Wire Line
+	7100 4150 6600 4150
+Wire Wire Line
+	7100 3950 7600 3950
+Wire Wire Line
+	7600 4000 7600 3950
+Wire Wire Line
+	5450 2800 5450 3000
+$Comp
+L Device:C C8
+U 1 1 5D1D7C1B
+P 5150 2800
+F 0 "C8" V 5300 2900 50  0000 L CNN
+F 1 "100n" V 5300 2650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5188 2650 50  0001 C CNN
+F 3 "~" H 5150 2800 50  0001 C CNN
+	1    5150 2800
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 5D1D83A9
+P 6000 2800
+F 0 "#PWR036" H 6000 2550 50  0001 C CNN
+F 1 "GND" H 6005 2627 50  0000 C CNN
+F 2 "" H 6000 2800 50  0001 C CNN
+F 3 "" H 6000 2800 50  0001 C CNN
+	1    6000 2800
+	0    -1   1    0   
+$EndComp
+Text HLabel 3850 3900 0    50   Output ~ 10
+DRDY
+Connection ~ 3400 3700
+Wire Wire Line
+	3400 3700 4800 3700
+Wire Wire Line
+	7600 4300 7900 4300
+Wire Wire Line
+	7900 4300 7900 4400
+Connection ~ 7600 4300
+Wire Wire Line
+	6600 4750 7900 4750
+Wire Wire Line
+	7900 4750 7900 4500
+Wire Wire Line
+	6800 3850 7700 3850
+Wire Wire Line
+	7700 3850 7700 3700
+Connection ~ 6800 3850
+Wire Wire Line
+	7600 3950 7800 3950
+Wire Wire Line
+	7800 3950 7800 3800
+Connection ~ 7600 3950
+$Comp
+L power:+3V3 #PWR035
+U 1 1 5D1F81CC
+P 5700 2750
+F 0 "#PWR035" H 5700 2600 50  0001 C CNN
+F 1 "+3V3" H 5715 2923 50  0000 C CNN
+F 2 "" H 5700 2750 50  0001 C CNN
+F 3 "" H 5700 2750 50  0001 C CNN
+	1    5700 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2750 5700 2800
+Connection ~ 5700 2800
+Wire Wire Line
+	5700 2800 5700 3000
+Wire Wire Line
+	7700 3700 9050 3700
+Wire Wire Line
+	8450 3800 8450 4050
+Wire Wire Line
+	7800 3800 8450 3800
+Connection ~ 8450 3800
+Wire Wire Line
+	8450 3800 9350 3800
+Wire Wire Line
+	9050 4050 9050 3700
+Connection ~ 9050 3700
+Wire Wire Line
+	9050 3700 9350 3700
+Wire Wire Line
+	7900 4400 8450 4400
+Wire Wire Line
+	7900 4500 9050 4500
+Wire Wire Line
+	8450 4150 8450 4400
+Connection ~ 8450 4400
+Wire Wire Line
+	8450 4400 9300 4400
+Wire Wire Line
+	9050 4150 9050 4500
+Connection ~ 9050 4500
+Wire Wire Line
+	9050 4500 9300 4500
+$Comp
+L IoT_AIO_libraries:MAX31865 U7
+U 1 1 5D2FC73E
+P 5700 4000
+F 0 "U7" H 5700 5271 50  0000 C CNN
+F 1 "MAX31865" H 5700 4000 50  0000 C CNN
+F 2 "Package_SO:SSOP-20_5.3x7.2mm_P0.65mm" H 6800 2950 50  0000 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 6000 4550 50  0001 C CNN
+	1    5700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L IoT_AIO_libraries:SW_3PST SW1
+U 2 1 5D3A0221
+P 8750 4050
+F 0 "SW1" H 8750 4250 50  0000 C CNN
+F 1 "SW_3PST" H 8750 4150 50  0000 C CNN
+F 2 "Footprint:416131160803" H 8750 4050 50  0001 C CNN
+F 3 "~" H 8750 4050 50  0001 C CNN
+	2    8750 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L IoT_AIO_libraries:SW_3PST SW1
+U 3 1 5D3A0A2B
+P 8750 4150
+F 0 "SW1" H 8750 3950 50  0000 C CNN
+F 1 "SW_3PST" H 8750 4050 50  0000 C CNN
+F 2 "Footprint:416131160803" H 8750 3700 50  0000 C CNN
+F 3 "~" H 8750 4150 50  0001 C CNN
+	3    8750 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4050 8950 4050
+Wire Wire Line
+	9050 4150 8950 4150
+Wire Wire Line
+	8550 4050 8450 4050
+Wire Wire Line
+	8550 4150 8450 4150
+Wire Wire Line
+	2750 3250 4800 3250
+Wire Wire Line
+	2750 3400 4800 3400
+Wire Wire Line
+	2750 3550 4800 3550
+Wire Wire Line
+	2750 3700 3400 3700
+Wire Wire Line
+	3850 3900 4800 3900
+$EndSCHEMATC

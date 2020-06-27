@@ -1,0 +1,36 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP FiPy
+D 5x Networks Module supporting  WiFi, Bluetooth, LoRa, Sigfox and dual LTE-M (CAT M1 and NBIoT)
+F https://docs.pycom.io/.gitbook/assets/specsheets/Pycom_002_Specsheets_FiPy_v2.pdf
+$ENDCMP
+#
+$CMP MAX13487EESD
+D RS485 transceiver, half duplex, dual supply, receiver/driver enable, 500kbps, SOIC-8 package
+K rs485 transceiver
+F https://datasheets.maximintegrated.com/en/ds/MAX13430E-MAX13433E.pdf
+$ENDCMP
+#
+$CMP SW_3PST
+D Triple Pole Single Throw (3PST) switch
+K switch lever
+F ~
+$ENDCMP
+#
+$CMP SW_DPDT_x4
+D Switch, quad pole double throw, separate symbols
+K switch quad-pole double-throw DPDT spdt ON-ON
+F ~
+$ENDCMP
+#
+$CMP TLV07IDR
+D 36-V Precision, Rail-to-Rail Output Operational Amplifier
+F http://www.ti.com/lit/ds/symlink/tlv07.pdf
+$ENDCMP
+#
+$CMP TLV333IDCKR
+D Single Low-Noise Operational Amplifiers,SOT-353_SC-70-5
+K single opamp
+$ENDCMP
+#
+#End Doc Library
