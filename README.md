@@ -5,10 +5,10 @@ IoT-AIO is a wireless adapter for developing IoT applications for Industrial and
 - voltage signals (0/2-10 V)
 - passive sensors (RTD, Strain Gauge,..)
 
-The adapter allows the implemention of IoT applications that rely on MQTT protocol via WiFi/NB-IoT/LTE Cat-M1 connection.
+The library allows the implemention of IoT applications that rely on MQTT protocol via WiFi/NB-IoT/LTE Cat-M1 interfaces.
 
 ## Adapter versions
-The Iot-AIO wireless adapter is available in two versions compatible with:
+The Iot-AIO wireless adapter is available in two versions developed using [KiCAD 5.1](https://kicad-pcb.org/) and compatible with:
 - [ESP32-PICO-KIT v4](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-pico-kit.html) - is an ESP32-based mini development board produced by [Espressif](https://espressif.com/). The board features integrated Wifi and BLE capabilites.
 - [FiPy](https://pycom.io/product/fipy/) - is an ESP32-based mini development board produced by [Pycom](https://pycom.io/). The board features integrated Wifi, BLE, LoRa, Sigfox, NB-IoT and LTE Cat-M1
 
