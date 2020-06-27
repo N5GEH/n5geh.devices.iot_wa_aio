@@ -1,0 +1,6 @@
+# Folders
+build/
+
+# Files
+sdkconfig
+sdkconfig.old

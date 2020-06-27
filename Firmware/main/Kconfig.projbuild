@@ -1,0 +1,182 @@
+menu "IoT Gateway Interface"
+
+	choice IOT_INTERFACE
+        prompt "Select the target interface"
+        default IOT_INTERFACE_AIO
+        help
+            Select the adopted IoT wireless interface.
+        config IOT_INTERFACE_AIO
+            bool "AIO"
+            help
+                Input/Output support for Analog Sensors:
+				    0(2)-10 V
+				    0(4)-20 mA
+				    2/3/4-wires passive
+        config IOT_INTERFACE_DIO
+            bool "DIO"
+            help
+                Interface support for Digital Sensors:
+				    RS485
+				    Ethernet
+				Protocols
+				    Modbus
+				    BACnet
+    endchoice
+	
+	if IOT_INTERFACE_AIO
+		menu "AIO Configuration"
+			
+		endmenu
+	endif
+	
+	if IOT_INTERFACE_DIO
+		menu "DIO Configuration"
+			
+		endmenu
+    endif
+    
+	choice NETWORK_INTERFACE
+        prompt "Select the network interface"
+        default NETWORK_WIFI
+        help
+            Select the adopted IoT wireless interface.
+        config NETWORK_WIFI
+            bool "Wi-Fi (IEEE-802.11 B/G/N)"
+            help
+                Use Wi-Fi communication (WPA/WPA2).
+        config NETWORK_PPP
+            bool "LTE (CAT-M1/NB1)"
+            help
+                Use LTE M2M or NB-IoT communication.
+    endchoice
+	
+	if NETWORK_WIFI
+		menu "WiFi Configuration"
+			
+		endmenu
+	endif
+	
+	if NETWORK_PPP
+		menu "LTE (CAT-M1) Configuration"
+			
+		endmenu
+    endif
+
+	menu "ISP Configuration"
+		config ISP_NOC
+            string "Set Network Operator Code (NOC)"
+            default "26201"
+            help
+                GSM Location Area Identification number (3-digit country code + 2-digit network code).
+    
+        config ISP_APN
+            string "Set Access Point Name (APN)"
+            default "internet.nbiot.telekom.de"
+            help
+                Logical name which is used to select the GGSN or the external packet data network.
+    
+        config ISP_PPP_AUTH_USERNAME
+            string "Set username for authentication"
+            default ""
+            help
+                Set username for PPP Authentication.
+    
+        config ISP_PPP_AUTH_PASSWORD
+            string "Set password for authentication"
+            default ""
+            help
+                Set password for PPP Authentication.
+    endmenu
+    
+    menu "UART Configuration"
+        menu "Adapter"
+            config UART_MODEM_PORT
+                int "Port Number"
+                default 1
+                range 0 2
+                help
+                    Serial Port Number.
+
+            config UART_MODEM_BAUDRATE
+                int "Baudrate"
+                default 921600
+                range 9600 921600
+                help
+                    Serial Baudrate.
+
+            config UART_TX_BUFFER_SIZE
+                int "UART TX Buffer Size"
+                range 256 2048
+                default 512
+                help
+                    Buffer size of UART TX buffer.
+            
+            config UART_RX_BUFFER_SIZE
+                int "UART RX Buffer Size"
+                range 256 2048
+                default 1024
+                help
+                    Buffer size of UART RX buffer.
+        endmenu
+
+        menu "Physical"
+            config UART_MODEM_TX_PIN
+                int "TXD Pin Number"
+                default 33
+                range 0 40
+                help
+                    Pin number of UART TX.
+    
+            config UART_MODEM_RX_PIN
+                int "RXD Pin Number"
+                default 34
+                range 0 40
+                help
+                    Pin number of UART RX.
+    
+            config UART_MODEM_RTS_PIN
+                int "RTS Pin Number"
+                default 32
+                range 0 40
+                help
+                    Pin number of UART RTS.
+    
+            config UART_MODEM_CTS_PIN
+                int "CTS Pin Number"
+                default 35
+                range 0 40
+                help
+                    Pin number of UART CTS.
+        endmenu
+
+        menu "Stack"
+            config UART_EVENT_TASK_STACK_SIZE
+                int "UART Event Task Stack Size"
+                range 2000 6000
+                default 2048
+                help
+                    Stack size of UART event task.
+    
+            config UART_EVENT_TASK_PRIORITY
+                int "UART Event Task Priority"
+                range 3 22
+                default 5
+                help
+                    Priority of UART event task.
+    
+            config UART_EVENT_QUEUE_SIZE
+                int "UART Event Queue Size"
+                range 10 40
+                default 30
+                help
+                    Length of UART event queue.
+    
+            config UART_PATTERN_QUEUE_SIZE
+                int "UART Pattern Queue Size"
+                range 10 40
+                default 20
+                help
+                    Length of UART pattern queue.
+        endmenu
+    endmenu
+endmenu
